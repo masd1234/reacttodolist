@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 6%;
+  width: 100%;
+  background-color: rgba(0, 81, 255, 0.747);
+}
+
+.logo {
+  color: whitesmoke;
+  text-align: center;
+  width: 20rem;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 45rem;
+}
+
+.label {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.input,
+.button {
+  height: 2rem;
+}
+
+.button {
+  color: whitesmoke;
+  background-color: rgba(43, 255, 0, 0.897);
+  border: none;
+  padding: 0.05rem;
+  width: 3rem;
+  border-radius: 0.2rem;
+  transition: 0.5s;
+}
+
+.button:hover {
+  color: rgba(43, 255, 0, 0.897);
+  background-color: whitesmoke;
+  transform: translateY(-0.2rem);
+}
+
+.button:active {
+  background-color: rgba(43, 255, 0, 0.897);
+  transform: translateY(0.2rem);
+}
+
+@media only screen and (max-width: 610px) {
+  .header {
+    height: 20%;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
+  .inputContainer {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .todosContainer {
+    align-content: flex-start;
+  }
+
+  .itemContainer {
+    min-width: 20rem;
+    margin: 1rem;
+  }
+}

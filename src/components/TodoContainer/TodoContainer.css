@@ -1,0 +1,86 @@
+.container {
+  height: 94%;
+  overflow: scroll;
+}
+
+.todosTitle {
+  display: block;
+  text-align: center;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todosContainer {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.itemContainer {
+  height: 12rem;
+  width: 40rem;
+  background-color: rgba(0, 81, 255, 0.747);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.categoryContainer {
+  width: 100%;
+  height: 40%;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  gap: 1rem;
+  width: 100%;
+  height: 60%;
+}
+
+.buttonTask {
+  border-radius: 0.2rem;
+  border: none;
+  width: 2rem;
+}
+
+.taskDone {
+  background-color: rgba(43, 255, 0, 0.897);
+  transition: 1s;
+}
+
+.buttonTaskDone {
+  background-color: rgba(43, 255, 0, 0.897);
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+.buttonTaskDone:hover {
+  background-color: whitesmoke;
+  color: rgba(43, 255, 0, 0.897);
+}
+
+.buttonTaskDetele {
+  background-color: red;
+  color: whitesmoke;
+  transition: 0.5s;
+}
+
+.buttonTaskDetele:hover {
+  background-color: whitesmoke;
+  color: red;
+}

@@ -1,0 +1,23 @@
+.containerCounter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  flex-direction: column;
+  left: 0;
+  min-width: 10rem;
+  height: 100%;
+  background-color: rgba(0, 81, 255, 0.747);
+}
+
+.count {
+  text-align: center;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 635px) {
+  .containerCounter {
+    min-width: 7rem;
+  }
+}

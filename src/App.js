@@ -1,24 +1,27 @@
 import React, { useState } from "react";
 import "./App.css";
-import SearchBar from "./components/searchBar/SearchBar";
+import Counter from "./components/Counter/Counter";
+import SearchBar from "./components/SearchBar/SearchBar";
 import TodoContainer from "./components/TodoContainer/TodoContainer";
 
 function App() {
   const [inputValueTask, setinputValueTask] = useState("");
   const [inputValueCategory, setinputValueCategory] = useState("");
   const [todos, setTodos] = useState([]);
-  const [taskDone] = useState(false);
+  const [taskDone, setTaskDone] = useState(0);
 
   const clickInput = (e) => {
     e.preventDefault();
-    if (!inputValueTask) {
-      alert("fill the input");
+
+    if (!inputValueCategory || !inputValueTask) {
+      alert("Please fill all the inputs");
     } else {
       let numb = Math.floor(Math.random() * 1000);
       let newValue = {
         id: numb,
         category: inputValueCategory,
         task: inputValueTask,
+        complete: false,
       };
 
       setTodos([...todos, newValue]);
@@ -44,10 +47,12 @@ function App() {
         setTodos={setTodos}
         clickInput={clickInput}
       />
+      <Counter todos={todos} taskDone={taskDone} />
       <TodoContainer
         todoState={todos}
         setTodos={setTodos}
         taskDone={taskDone}
+        setTaskDone={setTaskDone}
       />
     </div>
   );

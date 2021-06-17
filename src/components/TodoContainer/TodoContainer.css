@@ -1,5 +1,8 @@
 .container {
-  height: 94%;
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  right: 0;
   overflow: scroll;
 }
 

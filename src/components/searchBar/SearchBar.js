@@ -48,35 +48,37 @@ const SearchBar = ({
       <h1 className="logo">My Todo List</h1>
 
       <div className="inputContainer">
-        <label className="label" htmlFor="category">
-          Category:
-        </label>
+        <div>
+          <label className="label" htmlFor="category">
+            Category:
+          </label>
 
-        <select
-          value={inputValueCategory}
-          onChange={inputReaderCategory}
-          className="input"
-          type="text"
-          id="inputCategory"
-        >
-          {options.map((option, i) => (
-            <option key={i} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
-
-        <label className="label" htmlFor="todo">
-          Todo:
-        </label>
-        <input
-          className="input"
-          type="text"
-          id="inputTodo"
-          onChange={inputReaderTask}
-          value={inputState}
-        ></input>
-        <br />
+          <select
+            value={inputValueCategory}
+            onChange={inputReaderCategory}
+            className="input"
+            type="text"
+            id="inputCategory"
+          >
+            {options.map((option, i) => (
+              <option key={i} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label className="label" htmlFor="todo">
+            Todo:
+          </label>
+          <input
+            className="input"
+            type="text"
+            id="inputTodo"
+            onChange={inputReaderTask}
+            value={inputState}
+          ></input>
+        </div>
         <button className="button" onClick={clickInput}>
           Add
         </button>

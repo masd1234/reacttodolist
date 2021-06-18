@@ -21,26 +21,22 @@ const TodoContainer = ({ todoState, setTodos, taskDone, setTaskDone }) => {
       return el.id !== parseInt(e.target.id);
     });
 
-    console.log(e.target.parentNode);
-
-    setTodos([...filteredArr]);
-
     if (
       taskDone === 0 &&
       e.target.parentNode.parentNode.classList.contains("itemContainer")
     ) {
       e.stopPropagation();
     } else if (
-      taskDone > 0 &&
-      !e.target.parentNode.parentNode.classList.contains("itemContainer")
+      taskDone >= 0 &&
+      e.target.parentNode.parentNode.classList.contains("taskDone") &&
+      parseInt(e.target.id)
     ) {
-      taskDone--;
-      setTaskDone(taskDone);
-    } else {
       e.target.parentNode.parentNode.classList.remove("taskDone");
       taskDone--;
       setTaskDone(taskDone);
     }
+
+    setTodos([...filteredArr]);
   };
 
   return (
